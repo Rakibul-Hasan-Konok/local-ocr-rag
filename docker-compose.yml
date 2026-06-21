@@ -1,0 +1,11 @@
+version: "3.9"
+
+services:
+  local-ocr-rag:
+    build: .
+    container_name: local-ocr-rag
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./uploads:/app/uploads
+      - ./chroma_db:/app/chroma_db
